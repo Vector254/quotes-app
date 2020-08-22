@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormComponent } from './form/form.component';
+import { HighestUpvotesDirective } from './highest-upvotes.directive';
+import { timePipe } from './app.time-pipe';
 
 @NgModule({
   declarations: [
+    timePipe,
     AppComponent,
-    FormComponent
+    FormComponent,
+    HighestUpvotesDirective
   ],
   imports: [
     BrowserModule,
