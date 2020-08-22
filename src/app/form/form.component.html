@@ -1,0 +1,20 @@
+<div class="container">
+<div id="input">
+  <form [formGroup]="formdata" (ngSubmit) = "onClickSubmit(formdata.value)" >
+  <input type="text" class="fortextbox" name="name" placeholder="Name:"
+  formControlName="name">
+  <br/>
+  <input type="text" class="fortextbox" name="quote"
+  placeholder="Quote.." formControlName="quote">
+  <br/>
+  <input type="text" class="fortextbox" name="Author"
+  placeholder="Author:" formControlName="Author">
+  <br/>
+
+  <input id="button" type="submit" class="forsubmit" value="Create">
+</form>
+
+<p class="out">
+new quote:{{quote}}{{Author}}
+</p>
+</div>
