@@ -1,20 +1,34 @@
-<div class="container">
-<div id="input">
-  <form [formGroup]="formdata" (ngSubmit) = "onClickSubmit(formdata.value)" >
-  <input type="text" class="fortextbox" name="name" placeholder="Name:"
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+
+  <form class="enter"[formGroup]="formdata" (ngSubmit) = "onClickSubmit(formdata.value)" >
+  <label for="Name">Name:</label>
+  <input type="text" class="form-control" name="name" placeholder="Name:"
   formControlName="name">
   <br/>
-  <input type="text" class="fortextbox" name="quote"
+  <label for="Quote">Quote:</label>
+  <input type="textbox" class="form-control" name="quote"
   placeholder="Quote.." formControlName="quote">
   <br/>
-  <input type="text" class="fortextbox" name="Author"
+  <label for="Author">Author:</label>
+  <input type="text" class="form-control" name="Author"
   placeholder="Author:" formControlName="Author">
   <br/>
 
-  <input id="button" type="submit" class="forsubmit" value="Create">
+  <input id="button" type="submit" class="form-control" value="Create">
 </form>
+    </div>
 
-<p class="out">
-new quote:{{quote}}{{Author}}
-</p>
+
+<div id="out"class="col-md-5">
+  <p>
+{{quote}}<i id="authorData"><br>{{Author}}</i></p>
+<p><i class="far fa-arrow-alt-circle-up"></i></p>
+
 </div>
+<div class="col-md-1"></div>
+</div>
+</div>
+<app-quotes></app-quotes>
+

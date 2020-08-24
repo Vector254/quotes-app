@@ -1,0 +1,8 @@
+<div class="container-fluid">
+    <h1>Quotes</h1>
+    <ul>
+        <li *ngFor='let saying of sayings'>
+          posted by:{{saying.postedBy}}<br> {{saying.quote}}<i id="authorData"><br>author:{{saying.author}}</i>
+        </li>
+    </ul>
+</div>  
