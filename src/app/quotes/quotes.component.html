@@ -1,8 +1,8 @@
 <div class="container-fluid">
     <h1>Quotes</h1>
     <ul>
-        <div>
-        <li *ngFor='let saying of sayings;let i = index'>posted by:{{saying.postedBy}}<br> {{saying.quote}}<i id="authorData"><br>author:{{saying.author}}</i>
+        <div *ngFor='let saying of sayings;let i = index'>
+        <li appHighestUpvotes>posted by:<i id="authorData">{{saying.postedBy}}</i><br>{{saying.quote}}<br>author:<i id="authorData">{{saying.author}}</i><br>Posted on:<i id="authorData">{{saying.datePosted|date}}</i>
           <button id="more"(click)='toggleDetails(i)'>more</button>
           <app-quote-details *ngIf='saying.showDescription'  [quotes]='quotes'(isRead) = 'readQuote($event,i)'></app-quote-details></li>
         </div>
