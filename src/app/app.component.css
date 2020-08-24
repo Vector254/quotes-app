@@ -1,0 +1,6 @@
+.jumbotron{
+    background-image: url(../assets/one.jpeg);
+    background-size: cover;
+    font-weight: bold;
+    text-transform: uppercase;
+}

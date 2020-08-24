@@ -3,6 +3,8 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import '~font-awesome/css/font-awesome.css';
 body{
+    background-image: url(../src/assets/two.jpg);
+    background-size: cover;
     background-color: gray;
     padding: 50px;
 }
