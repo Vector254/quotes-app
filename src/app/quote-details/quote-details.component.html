@@ -3,7 +3,7 @@
     
 
     <div id="buttons">
-        <p id="post">posted for: {{quote.datePosted|timePipe}} days </p>
+        <p id="post">posted: {{quote.datePosted|timePipe}} days ago </p>
   <button id="upvote"class="btn btn-sm btn-success" (click)="upvote()"><i class="fa fa-plus-square" aria-hidden="true"> {{quote.upvotes}}</i></button> 
   <button id="downvote"class="btn btn-sm btn-danger" (click)="downvote()"> <i class="fa fa-minus-square" aria-hidden="true"> {{quote.downvotes}}</i></button> 
   <button id="delete"class="btn btn-sm btn-danger" (click)='deleteQuote(true)'><i class="fa fa-trash" ></i></button> 

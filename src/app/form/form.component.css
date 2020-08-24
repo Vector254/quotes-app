@@ -8,8 +8,9 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 12px;
+    font-size: 15px;
     width: 100px;
+    margin-left: 100px;
     }
 #input{
     background-image: url(../../assets/one.jpeg);
