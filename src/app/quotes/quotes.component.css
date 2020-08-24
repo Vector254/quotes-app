@@ -1,6 +1,6 @@
 #authorData{
-    color: darksalmon;
-    font-size: 12px;
+    color: gold;
+    font-size: 15px;
 }
 #more{
     background-color: green;
@@ -8,6 +8,7 @@
 }
 #say{
     font-weight: bold;
+    font-size: 18px;
 }
 #theQuote{
     background-image: url(../../assets/one.jpeg);
@@ -16,8 +17,10 @@
     border-style: solid;
     border-width: 2px;
     border-radius: 10px;
+    font-family: 'Courgette', cursive;
 }
 .data{
+    background-color: rgba(255, 255, 255, 0.3);
     border-style: solid;
     border-color: black;
     padding: 5px;
