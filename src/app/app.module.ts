@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { FormComponent } from './form/form.component';
 import { HighestUpvotesDirective } from './highest-upvotes.directive';
 import { QuotesComponent } from './quotes/quotes.component';
@@ -22,7 +22,7 @@ import { QuoteDetailsComponent } from './quote-details/quote-details.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

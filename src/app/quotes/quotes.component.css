@@ -6,3 +6,12 @@
     background-color: green;
     margin-left: 50px;
 }
+#say{
+    font-weight: bold;
+}
+#theQuote{
+    background-color: khaki;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+}

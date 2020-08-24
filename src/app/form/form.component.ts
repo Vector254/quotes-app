@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+
 import {Quotes} from '../quotes'
 @Component({
   selector: 'app-form',
@@ -7,22 +7,8 @@ import {Quotes} from '../quotes'
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-
-quote;
-Author;
-formdata;
-
-
-
+  newQuote = new Quotes("","","",new Date());
 
 ngOnInit() {
-this.formdata = new FormGroup({
-Name: new FormControl(),
-quote: new FormControl(),
-Author: new FormControl()
-});
 }
-onClickSubmit(data) {this.quote = data.quote; this.Author = data.Author;}
-
-
 }

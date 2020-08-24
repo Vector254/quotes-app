@@ -1,10 +1,22 @@
 <div class="container-fluid">
-    <h1>Quotes</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <app-form></app-form>
+          </div>
+        
+        <div id="theQuote" class="col-md-6">
+    <h1 class="text-center">Quotes</h1>
     <ul>
         <div *ngFor='let saying of sayings;let i = index'>
-        <li appHighestUpvotes>posted by:<i id="authorData">{{saying.postedBy}}</i><br>{{saying.quote}}<br>author:<i id="authorData">{{saying.author}}</i><br>Posted on:<i id="authorData">{{saying.datePosted|date}}</i>
+        <li appHighestUpvotes>posted by:<i id="authorData">{{saying.postedBy}}</i>
+            <br><span id="say">{{saying.quote}}</span><br>author:<i id="authorData">{{saying.author}}</i>
+            <br>Posted on:<i id="authorData">{{saying.datePosted|date|timePipe}}</i>
           <button id="more"(click)='toggleDetails(i)'>more</button>
           <app-quote-details *ngIf='saying.showDescription'  [quotes]='quotes'(isRead) = 'readQuote($event,i)'></app-quote-details></li>
         </div>
     </ul>
+        </div>
+    
+    
+      </div>
 </div>  
