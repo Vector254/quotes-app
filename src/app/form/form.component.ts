@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import {Quotes} from '../quotes'
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
