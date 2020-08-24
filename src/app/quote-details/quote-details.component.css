@@ -1,3 +1,6 @@
+.container-fluid{
+  font-family: 'Courgette', cursive;
+}
 #delete{
     font-size: 15px;
     float: right;
