@@ -1,8 +1,13 @@
 
-<div class="container-fluid" id="buttons">
-  <button class="btn btn-sm btn-success" > <i class="fa fa-thumbs-up" id="like"></i></button> 
-  <button class="btn btn-sm hate" id="hate" > <i class="fa fa-thumbs-down" id="dislike"></i></button> 
-  <button class="btn btn-sm btn-danger" id="del" (click)='deleteQuote(true)'><i class="fa fa-trash" id="delete"></i></button> 
+<div class="container-fluid">
+    <div>
+    <p>posted for: {{quote.datePosted|timePipe}} days </p>
+    </div>
+    <div id="buttons">
+  <button id="upvote"class="btn btn-sm btn-success" (click)="upvote()"><i class="fa fa-plus-square" aria-hidden="true"> {{quote.upvotes}}</i></button> 
+  <button id="downvote"class="btn btn-sm btn-danger" (click)="downvote"> <i class="fa fa-minus-square" aria-hidden="true"> {{quote.downvotes}}</i></button> 
+  <button id="delete"class="btn btn-sm btn-danger" (click)='deleteQuote(true)'><i class="fa fa-trash" ></i></button> 
+        </div>
 </div>
 
 
