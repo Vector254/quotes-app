@@ -1,4 +1,4 @@
-  QUOTES APP
+# QUOTES APP
 #### By 
 **Victor Nduati**
 ## Description
