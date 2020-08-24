@@ -21,6 +21,12 @@ export class QuotesComponent implements OnInit {
       this.sayings.splice(index,1);
     }
   }
+  addNewQuote(quote){
+    let quoteLength = this.sayings.length;
+    quote.id = quoteLength+1;
+    quote.completeDate = new Date(quote.datePosted)
+    this.sayings.push(quote)
+  }
     constructor() {
       var today = new Date();
    }

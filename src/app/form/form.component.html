@@ -2,7 +2,7 @@
   <div id="input">
     <h2 class="text-center">Create a new Quote</h2>
 
-  <form #quoteForm='ngForm'>
+  <form (ngSubmit)='submitQuote()'#quoteForm='ngForm'>
     <div class="form-group">
   <label for="Name">Name:</label>
   <input type="text" required class="form-control" name="name" placeholder="Name:"[(ngModel)]="newQuote.postedBy"#name='ngModel'>
