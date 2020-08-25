@@ -27,6 +27,21 @@ export class QuotesComponent implements OnInit {
     quote.completeDate = new Date(quote.datePosted)
     this.sayings.push(quote)
   }
+  
+  current:number
+  previous:number
+  counter:number
+
+  highestUpvote(){
+    this.current = 0
+    this.previous = 0
+
+    for(this.counter=0 ; this.counter < this.sayings.length; this.counter++) {
+      this.previous = this.sayings[this.counter].upvotes;
+      if(this.previous > this.current){this.current = this.previous}
+    }
+    return  this.current
+  }
     constructor() {
    }
 

@@ -5,8 +5,7 @@ import { Directive,ElementRef, HostListener } from '@angular/core';
 })
 export class HighestUpvotesDirective {
 
-  constructor(private elem:ElementRef) {}
-    private textDeco(action:string){
+  constructor(private elem:ElementRef) {
     this.elem.nativeElement.style.backgroundColor ='green';
    }
 
