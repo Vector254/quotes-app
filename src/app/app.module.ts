@@ -9,6 +9,7 @@ import { HighestUpvotesDirective } from './highest-upvotes.directive';
 import { QuotesComponent } from './quotes/quotes.component';
 import { TimePipePipe } from './time-pipe.pipe';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { QuoteDetailsComponent } from './quote-details/quote-details.component';
     HighestUpvotesDirective,
     QuotesComponent,
     TimePipePipe,
-    QuoteDetailsComponent
+    QuoteDetailsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -7,5 +7,6 @@ styleUrls: ['./app.component.css']
 })
 export class AppComponent {
 title = 'The Quotes App';
+footer='Copyright 2020';
 }
 
