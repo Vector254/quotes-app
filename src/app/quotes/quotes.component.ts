@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Quotes} from '../quotes';
+import { HttpClient } from '@angular/common/http';
+import { Quote } from '@angular/compiler';
+import { QuoteRequestService } from '../quote-http/quote-request.service';
 
 @Component({
   selector: 'app-quotes',
@@ -7,7 +10,7 @@ import {Quotes} from '../quotes';
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
-  
+  quote:Quotes;
   sayings:Quotes[] = [
     new Quotes('Impossible is just but an opinion','Paulo Coelho','vector',new Date(2019,7,24),0,0),
     new Quotes('No matter how much weed satan smokes, he can never be the most high','Anonymous','victor',new Date(2020,7,23),0,0),
@@ -16,6 +19,11 @@ export class QuotesComponent implements OnInit {
   toggleDetails(index){
     this.sayings[index].showDescription = !this.sayings[index].showDescription;
   }
+  more(button): void {
+    
+
+    button.innerHTML = "less";
+}
   readQuote(isRead, index){
     if (isRead) {
       this.sayings.splice(index,1);
@@ -42,10 +50,12 @@ export class QuotesComponent implements OnInit {
     }
     return  this.current
   }
-    constructor() {
+    constructor(private quoteService:QuoteRequestService) {
+    
    }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit() {
+    this.quoteService.quoteRequest()
+    this.quote = this.quoteService.quote
+}
 }

@@ -6,6 +6,12 @@
         
         <div id="theQuote" class="col-md-6">
     <h1 class="text-center">Quotes</h1>
+    <blockquote class="blockquote text-center">
+      <p><u>random quote</u></p>
+      <ng-progress></ng-progress>
+      <p class="mb-0">{{quote.quote}}</p>
+      <footer class="blockquote-footer"><cite>{{quote.author}}</cite></footer>
+    </blockquote>
     
         <div *ngFor='let saying of sayings;let i = index' class="data">
           <p appHighestUpvotes *ngIf="highestUpvote()===saying.upvotes && saying.upvotes>0"><u>most upvoted!</u><br><span id="say">"{{saying.quote}}"</span></p>
@@ -13,7 +19,9 @@
            <br>- <i id="authorData">{{saying.author}}</i></p>
             <p>posted by:<i id="authorData">{{saying.postedBy}}</i>
             <br>Posted on:<i id="authorData">{{saying.datePosted|date}}</i>
-          <button id="more"(click)='toggleDetails(i)'>more</button>
+          <button id="more" (click)='toggleDetails(i)'>more</button>
+              
+
           <app-quote-details [quote]='saying' *ngIf='saying.showDescription'  (isRead) = 'readQuote($event,i)'></app-quote-details></p>
         </div>
 

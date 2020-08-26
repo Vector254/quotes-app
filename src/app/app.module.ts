@@ -10,6 +10,9 @@ import { QuotesComponent } from './quotes/quotes.component';
 import { TimePipePipe } from './time-pipe.pipe';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { FooterComponent } from './footer/footer.component';
+import{HttpClientModule} from '@angular/common/http';
+import { NgProgressModule } from '@ngx-progressbar/core';
+import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 
 @NgModule({
   declarations: [
@@ -20,11 +23,15 @@ import { FooterComponent } from './footer/footer.component';
     TimePipePipe,
     QuoteDetailsComponent,
     FooterComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    NgProgressModule.forRoot(),
+    NgProgressHttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
