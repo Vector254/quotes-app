@@ -1,5 +1,7 @@
 import { Component, OnInit, Input,Output, EventEmitter } from '@angular/core';
 import {Quotes} from '../quotes';
+import {  ActivatedRoute, ParamMap } from '@angular/router';
+
 
 @Component({
   selector: 'app-quote-details',
@@ -21,9 +23,10 @@ export class QuoteDetailsComponent implements OnInit {
     this.quote.downvotes+=1;
   }
 
-  constructor() { }
+  constructor(private route:ActivatedRoute,) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    let id = this.route.snapshot.paramMap.get('id');
   }
 
 }

@@ -20,9 +20,8 @@
             <p>posted by:<i id="authorData">{{saying.postedBy}}</i>
             <br>Posted on:<i id="authorData">{{saying.datePosted|date}}</i>
           <button id="more" (click)='toggleDetails(i)'>more</button>
-              
-
-          <app-quote-details [quote]='saying' *ngIf='saying.showDescription'  (isRead) = 'readQuote($event,i)'></app-quote-details></p>
+          <app-quote-details [quote]='saying' *ngIf='saying.showDescription'  (isRead) = 'readQuote($event,i)'></app-quote-details>
+        
         </div>
 
         </div>

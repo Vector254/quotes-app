@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {Quotes} from '../quotes';
 import { HttpClient } from '@angular/common/http';
-import { Quote } from '@angular/compiler';
+
 import { QuoteRequestService } from '../quote-http/quote-request.service';
+import { Router } from '@angular/router';
+import {Quote} from '../quote-class/quote'
 
 @Component({
   selector: 'app-quotes',
@@ -10,12 +12,17 @@ import { QuoteRequestService } from '../quote-http/quote-request.service';
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
-  quote:Quotes;
+  
+  router:Router;
+  quote:Quote;
   sayings:Quotes[] = [
     new Quotes('Impossible is just but an opinion','Paulo Coelho','vector',new Date(2019,7,24),0,0),
     new Quotes('No matter how much weed satan smokes, he can never be the most high','Anonymous','victor',new Date(2020,7,23),0,0),
     new Quotes('Intelligence is the ability to adapt to change','Stephen Hawking','nduati',new Date(2020,7,22),0,0)
   ];
+  goToUrl(id){
+    this.router.navigate(['/quotes',id])
+  }
   toggleDetails(index){
     this.sayings[index].showDescription = !this.sayings[index].showDescription;
   }
