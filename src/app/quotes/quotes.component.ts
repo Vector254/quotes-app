@@ -12,6 +12,7 @@ import {Quote} from '../quote-class/quote'
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
+  
   router:Router;
   quote:Quote;
   sayings:Quotes[] = [
@@ -56,20 +57,12 @@ export class QuotesComponent implements OnInit {
     }
     return  this.current
   }
-   constructor(private http:HttpClient){}
+    constructor(private quoteService:QuoteRequestService) {
+    
+   }
 
   ngOnInit() {
-    interface ApiResponse{
-      author:string;
-      quote:string;
-    }
-    this.http.get<ApiResponse>("http://quotes.stormconsultancy.co.uk/random.json").subscribe(data=>{
-      // Succesful API request
-      this.quote = new Quote(data.author, data.quote)
-    },err=>{
-        this.quote = new Quote("Winston Churchill","Never never give up!")
-        console.log("An error occurred")
-    })
+    this.quoteService.quoteRequest()
+    this.quote = this.quoteService.quote
 }
-
 }
