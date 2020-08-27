@@ -11,8 +11,7 @@ import { TimePipePipe } from './time-pipe.pipe';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { FooterComponent } from './footer/footer.component';
 import{HttpClientModule} from '@angular/common/http';
-import { NgProgressModule } from '@ngx-progressbar/core';
-import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
+
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -35,9 +34,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
-    NgProgressModule.forRoot(),
-    NgProgressHttpClientModule
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
